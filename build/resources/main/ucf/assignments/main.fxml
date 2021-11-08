@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="anchor" prefHeight="535.0" prefWidth="1033.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.Controller">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="1033.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#menu_save" text="Save as" />
+                  <MenuItem mnemonicParsing="false" onAction="#load" text="Open" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="15.0" layoutY="25.0" prefHeight="38.0" prefWidth="133.0" text="To Do List" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="26.0" />
+         </font>
+      </Label>
+      <TableView id="table" fx:id="tableView" layoutY="63.0" prefHeight="410.0" prefWidth="1033.0">
+        <columns>
+            <TableColumn fx:id="completedColumn" prefWidth="129.0" text="Completed" />
+          <TableColumn fx:id="dateColumn" prefWidth="175.0" text="Due Date" />
+          <TableColumn fx:id="taskColumn" prefWidth="728.0" text="Task" />
+        </columns>
+      </TableView>
+      <DialogPane id="footer" layoutY="475.0" prefHeight="61.0" prefWidth="1033.0" />
+      <Button layoutX="787.0" layoutY="487.0" mnemonicParsing="false" onAction="#Add_task_button" prefHeight="38.0" prefWidth="96.0" text="Add Task" />
+      <Button layoutX="903.0" layoutY="487.0" mnemonicParsing="false" onAction="#delete_button" prefHeight="38.0" prefWidth="96.0" text="Delete" />
+      <Button layoutX="14.0" layoutY="487.0" mnemonicParsing="false" onAction="#check_button" prefHeight="38.0" prefWidth="112.0" text="Mark Completed " />
+      <TextField fx:id="taskTextField" layoutX="278.0" layoutY="487.0" prefHeight="38.0" prefWidth="482.0" promptText="Enter Task" />
+      <DatePicker fx:id="taskDatePicker" layoutX="137.0" layoutY="487.0" prefHeight="38.0" prefWidth="133.0" />
+      <Button layoutX="908.0" layoutY="32.0" mnemonicParsing="false" onAction="#show_all" prefHeight="13.0" prefWidth="86.0" text="Show ALL" />
+      <Button layoutX="779.0" layoutY="32.0" mnemonicParsing="false" onAction="#Show_only_completed" prefHeight="25.0" prefWidth="112.0" text="Hide Completed " />
+      <Button layoutX="648.0" layoutY="32.0" mnemonicParsing="false" onAction="#hide_completed" prefHeight="25.0" prefWidth="112.0" text="Show Completed " />
+   </children>
+</AnchorPane>
